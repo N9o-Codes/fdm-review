@@ -1,0 +1,136 @@
+/* carousel */
+#homePage .carousel {
+  position: relative;
+}
+#homePage .track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+#homePage .track::-webkit-scrollbar {
+  display: none;
+}
+#homePage .slide {
+  flex: 0 0 100%;
+  scroll-snap-align: center;
+  min-height: min(56vh, 400px);
+  display: flex;
+  align-items: flex-end;
+  padding: 2.5rem 0 calc(var(--carousel-controls-height, 40px) + 2rem);
+  color: #fff;
+  position: relative;
+}
+#homePage .slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(40, 25, 80, 0.62),
+    rgba(40, 25, 80, 0.56)
+  );
+}
+#homePage .slide .wrap {
+  position: relative;
+}
+#homePage .s1 {
+  background: linear-gradient(135deg, #7c5cf5, #b07af2 55%, #ff9a7a);
+}
+#homePage .s2 {
+  background: linear-gradient(135deg, #4f8cf0, #6fb4f2 60%, #8fe0cf);
+}
+#homePage .s3 {
+  background: linear-gradient(135deg, #e0568f, #f58aa8 55%, #ffbf80);
+}
+#homePage .s4 {
+  background: linear-gradient(135deg, #2fa985, #62cfa4 55%, #e2df7c);
+}
+#homePage .slide h1 {
+  font-size: clamp(1.9rem, 5.5vw, 3.3rem);
+  font-weight: 800;
+  max-width: 18ch;
+}
+#homePage .slide p {
+  max-width: 52ch;
+  margin: 0 0 1.2rem;
+}
+#homePage .ctl {
+  position: absolute;
+  bottom: 1.2rem;
+  left: 0;
+  right: 0;
+}
+#homePage .ctl .wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+#homePage .dot {
+  position: relative;
+  width: 32px;
+  height: 40px;
+  border-radius: 99px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+#homePage .dot::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  inset: 0;
+  margin: auto;
+  border-radius: 99px;
+  background: #fff;
+  transition: width 0.25s;
+}
+#homePage .dot[aria-current="true"]::before {
+  width: 30px;
+}
+#homePage .arrows {
+  margin-left: auto;
+  display: flex;
+  gap: 0.5rem;
+}
+#homePage .arrows button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.8);
+  background: rgba(40, 25, 80, 0.45);
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+}
+#homePage .rotation:disabled {
+  cursor: not-allowed;
+}
+#homePage .hero-badge {
+  background: rgba(40, 25, 80, 0.45);
+  color: #fff;
+}
+#homePage .btn.hero-register {
+  background: #fff;
+  color: var(--ink);
+}
+#homePage .dots {
+  display: flex;
+}
+#homePage .contact-email {
+  color: var(--accent-text);
+  font-weight: 600;
+}
+#homePage .compact-lead {
+  font-size: 0.95rem;
+}
+@media (prefers-reduced-motion: reduce) {
+  #homePage .dot::before {
+    transition: none;
+  }
+}

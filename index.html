@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="color-scheme" content="light" />
+    <title>FDM — Future Debate Masters</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/app/styles/index.css" />
+    <link rel="modulepreload" href="src/app/main.js" />
+  </head>
+  <body data-app-state="loading">
+    <a class="skip-link" href="#startup-panel">Skip to content</a>
+    <header>
+      <div class="wrap bar">
+        <a class="logo" id="homeLogo" href="#top" aria-label="FDM home">FDM</a>
+        <button
+          class="burger"
+          type="button"
+          aria-controls="nav"
+          aria-label="Menu"
+          aria-expanded="false"
+          id="burger"
+          disabled
+        >
+          ☰
+        </button>
+        <nav id="nav" aria-label="Main" inert aria-busy="true">
+          <a href="#about-fdm" class="nav-link">About FDM</a>
+          <a href="#events" class="nav-link">Events</a>
+          <a href="#essentials" class="nav-link">Essentials</a>
+          <a href="#timeline" class="nav-link">Timeline</a>
+          <a class="nav-btn" id="teamsLink" href="#teams">Meet the teams</a>
+          <a class="nav-btn featured-nav" id="learnMoreLink" href="#learn-more"
+            >Learn More</a
+          >
+          <a
+            class="btn"
+            id="signinBtn"
+            href="#sign-in"
+            aria-disabled="true"
+            tabindex="-1"
+            >Sign in</a
+          >
+        </nav>
+      </div>
+    </header>
+    <main id="startup-panel" class="startup-panel wrap" tabindex="-1">
+      <p id="app-status" role="status">Loading Future Debate Masters…</p>
+      <section
+        id="startup-error"
+        role="alert"
+        aria-labelledby="startup-error-title"
+      >
+        <h1 id="startup-error-title" tabindex="-1">
+          We couldn’t load the page
+        </h1>
+        <p>Check your connection, then try again.</p>
+        <button id="retry-startup" class="btn" type="button">Try again</button>
+        <p>
+          Need help? Contact
+          <a href="mailto:info@fdm-leb.com">info@fdm-leb.com</a>.
+        </p>
+      </section>
+    </main>
+    <div id="pages" tabindex="-1" aria-busy="true"></div>
+    <noscript
+      ><style>
+        #startup-panel {
+          display: none;
+        }
+      </style>
+      <p class="wrap">
+        Please enable JavaScript to view the FDM screens. For help, contact
+        info@fdm-leb.com.
+      </p></noscript
+    >
+    <footer>
+      <div class="wrap">
+        <div>© 2026 Future Debate Masters (FDM) · info@fdm-leb.com</div>
+        <div class="footer-links">
+          <a href="#about-fdm" class="nav-link">About FDM</a>
+          <a href="#essentials" class="nav-link">Essentials</a>
+          <a href="#privacy" class="nav-link">Privacy Policy</a>
+          <a href="#terms" class="nav-link">Terms & Conditions</a>
+        </div>
+      </div>
+    </footer>
+    <script src="src/app/recovery.js"></script>
+    <script id="app-entry" type="module" src="src/app/bootstrap.js"></script>
+  </body>
+</html>

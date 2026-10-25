@@ -1,0 +1,95 @@
+/* teams subpage */
+#teamsPage .photo {
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  flex: none;
+  background:
+    radial-gradient(
+      circle at 50% 36%,
+      rgba(255, 255, 255, 0.7) 0 15%,
+      transparent 16%
+    ),
+    radial-gradient(
+      ellipse at 50% 100%,
+      rgba(255, 255, 255, 0.65) 0 36%,
+      transparent 37%
+    ),
+    linear-gradient(150deg, var(--ph1), var(--ph2));
+}
+#teamsPage .teamlist {
+  display: grid;
+  gap: 1rem;
+}
+#teamsPage .group {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 1.2rem 1.4rem;
+  display: grid;
+  grid-template-columns: 190px minmax(0, 1fr);
+  gap: 1rem 1.5rem;
+  align-items: center;
+}
+#teamsPage .group h3 {
+  font-size: 1.1rem;
+  margin: 0;
+}
+#teamsPage .group p {
+  margin: 0.15rem 0 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+#teamsPage .row {
+  min-inline-size: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+#teamsPage .person {
+  width: 84px;
+  text-align: center;
+}
+#teamsPage .person .photo {
+  width: 100%;
+}
+#teamsPage .person b {
+  display: block;
+  font-size: 0.78rem;
+  margin-top: 0.45rem;
+  line-height: 1.3;
+}
+#teamsPage .person.ld {
+  width: 130px;
+  padding-right: 1.4rem;
+  border-right: 1px solid var(--line);
+}
+#teamsPage .ld .photo {
+  box-shadow:
+    0 0 0 3px var(--surface),
+    0 0 0 5px var(--a);
+}
+#teamsPage .tag {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--accent-text);
+  background: var(--tint);
+  border-radius: 99px;
+  padding: 0.05rem 0.6rem;
+  margin-top: 0.25rem;
+  max-inline-size: 100%;
+}
+@media (max-width: 700px) {
+  #teamsPage .group {
+    grid-template-columns: 1fr;
+  }
+  #teamsPage .row {
+    gap: 1rem;
+  }
+  #teamsPage .person.ld {
+    border-right: 0;
+    padding-right: 0;
+    width: 84px;
+  }
+}

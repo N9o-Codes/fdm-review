@@ -1,0 +1,140 @@
+.btn {
+  display: inline-block;
+  border: 0;
+  border-radius: 999px;
+  padding: 0.7rem 1.4rem;
+  font:
+    600 0.93rem Sora,
+    sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+  background: linear-gradient(90deg, var(--button-start), var(--button-end));
+  color: #fff;
+  text-align: center;
+  max-inline-size: 100%;
+}
+/* sections */
+.tint-bg {
+  background: var(--tint);
+}
+.surface-bg {
+  background: var(--surface);
+}
+.center {
+  text-align: center;
+}
+.center .lead {
+  margin-inline: auto;
+}
+.btn.big {
+  padding: 0.95rem 2.2rem;
+  font-size: 1.05rem;
+}
+.badge {
+  display: inline-block;
+  padding: 0.2rem 0.7rem;
+  border-radius: 99px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  background: var(--tint);
+  color: var(--accent-text);
+  margin-bottom: 0.8rem;
+}
+/* grid layouts */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  gap: 1.5rem;
+}
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: 1.5rem;
+}
+.card {
+  min-inline-size: 0;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 1.5rem;
+}
+.tint-bg .card {
+  background: var(--bg);
+}
+.card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.4rem;
+}
+.card p {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+.card ul {
+  margin: 0.8rem 0 0;
+  padding-left: 1.2rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+/* details/accordion */
+details {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 0 1.5rem;
+  margin-bottom: 1rem;
+}
+summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 800;
+  font-size: 1.15rem;
+  padding: 1.2rem 0;
+}
+summary::-webkit-details-marker {
+  display: none;
+}
+summary::after {
+  content: "+";
+  font-size: 1.6rem;
+  color: var(--accent-text);
+  flex-shrink: 0;
+}
+details[open] summary::after {
+  content: "–";
+}
+.acc-body {
+  padding-bottom: 1.4rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+.back {
+  background: none;
+  border: 0;
+  color: var(--muted);
+  font:
+    600 0.82rem Sora,
+    sans-serif;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+.back-to-home {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+}
+[hidden] {
+  display: none !important;
+}
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}

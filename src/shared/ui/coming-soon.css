@@ -1,0 +1,36 @@
+/* Shared notice layout; content and routes belong to their page slices. */
+.page .coming-soon {
+  min-block-size: calc(100svh - var(--header-height));
+  display: grid;
+  align-items: center;
+}
+.coming-soon .back {
+  display: inline-block;
+  text-decoration: none;
+}
+.coming-soon-card {
+  max-inline-size: 760px;
+  margin-inline: auto;
+  padding: clamp(1.5rem, 5vw, 3.5rem);
+  box-shadow: 0 16px 48px rgba(83, 48, 168, 0.08);
+}
+.coming-soon-card h1 {
+  font-size: clamp(2rem, 5vw, 3.3rem);
+}
+.coming-soon-card > p:not(.lead) {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-block: 1rem;
+}
+.coming-soon-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.5rem;
+  margin-block-start: 2rem;
+}
+.coming-soon-contact {
+  color: var(--accent-text);
+  font-weight: 600;
+  text-underline-offset: 0.2em;
+}
